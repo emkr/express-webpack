@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon system/app.js --ignore 'dist'",
+    "dev": "nodemon system/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+      "ignore": ["dist/*", "frontend/*"]
   },
   "author": "",
   "license": "ISC",

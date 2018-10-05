@@ -24,6 +24,7 @@ const config = {
         extensions: ['.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
+            'components': path.resolve(__dirname, '../system/components'),
         }
     },
     module: {
@@ -64,9 +65,9 @@ const config = {
                         loader: 'sass-loader',
                         options: {
                             data: `
-                                @import "./settings";
-                                @import "../../../node_modules/foundation-sites/scss/foundation";
-                                @import "./vendors/foundation";
+                                @import "./frontend/assets/sass/settings";
+                                @import "./node_modules/foundation-sites/scss/foundation";
+                                @import "./frontend/assets/sass/vendors/foundation";
                             `
                         }
                     }
